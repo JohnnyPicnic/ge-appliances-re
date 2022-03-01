@@ -51,7 +51,7 @@ while True:
 				if (cmd == 0xb8 or 0xf0 or 0xf1 or 0xf2 or 0xf3 or 0xf4 or 0xf5):
 					erdCount = hex(geaPacket[5])
 					payload = binascii.hexlify(geaPacket[6:(len-geaPacketOverheadSize)])
-					print "Received message: Dst: " + dst + " Src: " + src + " Cmd: " + cmd + " numErds: " + erdCount + " Payload: " + payload
+					print ("Received message: Dst: " + dst + " Src: " + src + " Cmd: " + cmd + " numErds: " + erdCount + " Payload: " + payload)
 				else:
 					payload = binascii.hexlify(geaPacket[5:(len-geaPacketOverheadSize)])
-					print "Received message: Dst: " + dst + " Src: " + src + " Cmd: " + cmd + " Payload: " + payload
+					print ("Received message: Dst: " + dst + " Src: " + src + " Cmd: " + cmd + " Payload: " + payload)
